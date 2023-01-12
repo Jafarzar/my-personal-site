@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header>
+    <header className="sticky top-0 p-5 max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
         initial={{
           x: 500,
@@ -21,7 +21,7 @@ export default function Header({}: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex justify-end gap-5 p-5"
+        className="flex justify-end gap-5"
       >
         <SocialIcon
           url="https://twitter.com/Jafarzar"

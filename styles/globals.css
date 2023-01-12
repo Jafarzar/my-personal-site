@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  background-color: grey;
-} */
+@layer components {
+  .heroButton {
+    @apply px-6 py-2 border rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-amber-800/40  hover:text-amber-800/40;
+  }
+}
