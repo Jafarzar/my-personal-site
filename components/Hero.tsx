@@ -29,6 +29,7 @@ export default function Hero({}: Props) {
       className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
     >
       <Image
+        priority
         src={profilePic}
         alt="my photo"
         className="relative rounded-full h-36 w-36 mx-auto object-cover"
@@ -38,7 +39,7 @@ export default function Hero({}: Props) {
         <h1 className="text-sm text-gray-500 py-2 tracking-widest">
           Front-End Web Developer
         </h1>
-        <div className="flex gap-2 pt-5">
+        <div className="flex gap-5 pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
