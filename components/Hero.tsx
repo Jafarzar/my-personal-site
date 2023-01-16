@@ -2,7 +2,6 @@ import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profilePic from "../img/jafar-2.jpg";
 import Link from "next/link";
 
 type Props = {};
@@ -30,11 +29,13 @@ export default function Hero({}: Props) {
     >
       <Image
         priority
-        src={profilePic}
+        src="/img/jafar-2.jpg"
         alt="my photo"
-        className="relative rounded-full h-36 w-36 mx-auto object-cover"
+        width="144"
+        height="144"
+        className="relative rounded-full mx-auto object-cover"
       />
-      <div>
+      <div className="z-20">
         <h1 className="text-5xl font-semibold h-[2ch]">{text}</h1>
         <h1 className="text-sm text-gray-500 py-2 tracking-widest">
           Front-End Web Developer

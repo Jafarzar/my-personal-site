@@ -55,8 +55,8 @@ export default function Skills({}: Props) {
       </div>
 
       <p className="items-center p-8 text-sm max-w-lg md:max-w-sm md:text-base xl:text-xl text-gray-500 text-justify">
-        i just finished all my training for this field in january 2023 (you can
-        consider me as a freshgrade😅). and still have much more to learn and
+        I just finished all my training for this field in january 2023 (you can
+        consider me as a freshgrade😅). So i still have much more to learn and
         gain more experience.
       </p>
     </div>

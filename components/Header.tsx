@@ -31,6 +31,20 @@ export default function Header({}: Props) {
           target="_blank"
         />
         <SocialIcon
+          url="https://www.linkedin.com/in/jafarzar/"
+          fgColor="white"
+          bgColor="grey"
+          style={{ height: 30, width: 30 }}
+          target="_blank"
+        />
+        <SocialIcon
+          url="https://github.com/Jafarzar"
+          fgColor="white"
+          bgColor="grey"
+          style={{ height: 30, width: 30 }}
+          target="_blank"
+        />
+        <SocialIcon
           network="email"
           fgColor="white"
           style={{ height: 30, width: 30 }}

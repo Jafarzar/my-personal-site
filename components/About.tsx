@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import profilePic from "../img/jafar-3.jpg";
 import { motion, Variants } from "framer-motion";
 
 type Props = {};
@@ -34,9 +33,11 @@ export default function About({}: Props) {
       >
         <Image
           priority
-          src={profilePic}
+          src="/img/jafar-3.jpg"
           alt="my photo 2"
-          className="m-0 flex-shrink-0 object-cover rounded-2xl h-64 w-52 md:rounded-lg md:w-65 md:h-95 xl:w-[400px] xl:h-[500px]"
+          width="400"
+          height="500"
+          className="m-0 flex-shrink-0 object-cover rounded-2xl"
         />
       </motion.div>
 

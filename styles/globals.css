@@ -12,4 +12,7 @@
   .icons {
     @apply w-10 h-10 md:w-14 md:h-14;
   }
+  .modalButton {
+    @apply text-sm bg-slate-700 rounded-full px-2;
+  }
 }
