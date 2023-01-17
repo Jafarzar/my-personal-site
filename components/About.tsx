@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 
 type Props = {};
 
@@ -52,7 +52,7 @@ export default function About({}: Props) {
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.9, transition: { duration: 0.5 } }}
             onClick={buttonHandler}
             variants={{
               closed: { opacity: 0 },
