@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,17 +40,25 @@ export default function Hero({}: Props) {
         <h1 className="text-sm text-gray-500 py-2 tracking-widest">
           Front-End Web Developer
         </h1>
-        <div className="flex gap-5 pt-5">
-          <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
-          </Link>
-        </div>
+        <AnimatePresence>
+          <div className="flex gap-5 pt-5">
+            <Link href="#about">
+              <motion.button whileTap={{ scale: 1.1 }} className="heroButton">
+                About
+              </motion.button>
+            </Link>
+            <Link href="#skills">
+              <motion.button whileTap={{ scale: 1.1 }} className="heroButton">
+                Skills
+              </motion.button>
+            </Link>
+            <Link href="#projects">
+              <motion.button whileTap={{ scale: 1.1 }} className="heroButton">
+                Projects
+              </motion.button>
+            </Link>
+          </div>
+        </AnimatePresence>
       </div>
     </motion.div>
   );

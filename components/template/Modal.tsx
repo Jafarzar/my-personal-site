@@ -30,8 +30,8 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                   className="absolute inset-0 bg-gray-500 opacity-75"
                 />
               </div>
-              {/* <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>
-            &#06ff1333; */}
+
+              {/* MODAL */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -48,45 +48,60 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                       {data?.title}
                     </h3>
 
-                    <div className="flex flex-col md:flex-row gap-4 mt-2">
+                    <div className="flex flex-col items-center gap-4 max-w-xs md:max-w-prose md:items-start">
                       {/* IMAGE CONTENT */}
-                      <div className="bg-slate-900 w-60 h-44" />
+                      {data!.image && (
+                        <Image
+                          src={data!.image}
+                          alt="gif"
+                          width="400"
+                          height="400"
+                          className="w-64 h-fit border md:w-96"
+                        />
+                      )}
                       {/* LINK BUTTON */}
-                      <div className="flex md:flex-col justify-evenly text-center md:justify-center gap-4">
-                        <a
+                      <div className="flex justify-evenly text-center md:justify-end gap-4">
+                        <motion.a
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 1.2 }}
                           href={data?.link}
                           rel="noreferrer"
                           target="_blank"
                           className="modalButton"
                         >
-                          Go to Website!
-                        </a>
-                        <a
+                          Website
+                        </motion.a>
+                        <motion.a
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 1.2 }}
                           href={data?.github}
                           rel="noreferrer"
                           target="_blank"
                           className="modalButton"
                         >
-                          Go to Repo!
-                        </a>
+                          Repository
+                        </motion.a>
+                      </div>
+
+                      {/* DESCRIPTION */}
+                      <div className="font-semibold text-sm text-slate-800 mb-6 md:text-left">
+                        <p>Description</p>
+                        <div className="text-gray-500 font-normal">
+                          {data?.desc}
+                        </div>
                       </div>
                     </div>
 
-                    {/* DESCRIPTION */}
-                    <div className="font-semibold text-sm text-slate-800 mb-6 max-w-xs">
-                      <p>Description</p>
-                      <div className="text-gray-500 font-normal text-justify">
-                        {data?.desc}
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={closeModal}
-                      type="button"
-                      className="modalButton"
-                    >
-                      Close
-                    </button>
+                    <AnimatePresence>
+                      <motion.button
+                        whileTap={{ scale: 1.2 }}
+                        onClick={closeModal}
+                        type="button"
+                        className="text-xs text-white bg-zinc-600 hover:bg-zinc-700 py-1 px-2 rounded-md border-2 border-black"
+                      >
+                        Close
+                      </motion.button>
+                    </AnimatePresence>
                   </div>
                 </div>
               </motion.div>
