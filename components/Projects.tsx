@@ -67,9 +67,7 @@ export default function Projects({}: Props) {
 
   return (
     <div className="flex flex-col relative gap-4 h-screen md:flex-row max-w-7xl px-10 justify-center mx-auto items-center">
-      <div className="absolute top-24 tracking-widest text-gray-500 text-2xl">
-        Projects
-      </div>
+      <div className="sectionTitle">Projects</div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
         {DUMMY_DATA.map((data) => {
@@ -95,7 +93,7 @@ export default function Projects({}: Props) {
                   className="w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-slate-600 shadow-md shadow-gray-800/60 cursor-pointer object-cover"
                 />
               </motion.div>
-              <h3 className="text-sm font-bold tracking-widest">
+              <h3 className="text-sm md:text-xl font-semibold tracking-widest">
                 {data.title}
               </h3>
             </motion.div>

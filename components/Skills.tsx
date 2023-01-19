@@ -12,9 +12,7 @@ export default function Skills({}: Props) {
 
   return (
     <div className="flex flex-col relative gap-4 h-screen md:flex-row max-w-7xl px-10 justify-center mx-auto items-center">
-      <h3 className="absolute top-24 tracking-widest text-gray-500 text-2xl">
-        Skills
-      </h3>
+      <h3 className="sectionTitle">Skills</h3>
 
       <div className="bg-slate-300 w-[400px] h-[400px]" ref={dragAreaRef}>
         <div className="flex">
@@ -54,7 +52,7 @@ export default function Skills({}: Props) {
         <div></div>
       </div>
 
-      <p className="items-center p-8 text-sm max-w-lg md:max-w-sm md:text-base xl:text-xl text-gray-500 text-justify">
+      <p className="items-center p-8 max-w-lg md:max-w-sm text-center md:text-left">
         I just finished all my training for this field in january 2023 (you can
         consider me as a freshgrade😅). So i still have much more to learn and
         gain more experience.

@@ -1,10 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  ::-webkit-scrollbar {
+    @apply xl:w-4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-800 rounded-md bg-clip-padding border-x-2 border-solid border-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-900;
+  }
+
+  h3,
+  p {
+    @apply text-sm md:text-lg xl:text-xl;
+  }
+}
+
 @layer components {
+  .sectionTitle {
+    @apply absolute top-24 tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black;
+  }
+
+  .headerButton {
+    @apply bg-gray-700 rounded-full cursor-pointer border-2 border-black;
+  }
+
   .heroButton {
-    @apply px-4 py-1 rounded-lg text-sm tracking-widest font-medium text-white bg-purple-800 hover:bg-purple-900 border-2 border-black;
+    @apply px-4 py-1 rounded-lg text-sm tracking-widest font-semibold text-white bg-purple-800 hover:bg-purple-900 border-2 border-black;
   }
   .iconBorder {
     @apply bg-slate-900 border-4 border-slate-700 rounded-3xl w-20 h-20 flex justify-center items-center hover:cursor-grab active:cursor-grabbing;
@@ -13,10 +42,6 @@
     @apply w-10 h-10 md:w-14 md:h-14;
   }
   .modalButton {
-    @apply text-sm text-white font-medium bg-purple-800 hover:bg-purple-900 rounded-md py-2 px-4;
+    @apply text-sm text-white font-medium bg-purple-800 hover:bg-purple-900 rounded-md py-2 px-4 border-2 border-black;
   }
-}
-
-::-webkit-scrollbar {
-  display: none;
 }

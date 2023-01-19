@@ -21,7 +21,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
     <div>
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed z-50 inset-0 overflow-y-auto">
+          <div className="fixed z-50 inset-0 overflow-y-scroll">
             <div className="flex items-center justify-center min-h-screen text-center">
               <div className="fixed inset-0 transition-opacity">
                 {/* BACKDROPS */}
