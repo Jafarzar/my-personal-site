@@ -9,6 +9,15 @@ module.exports = {
       fontFamily: {
         share: ["Share", "cursive"],
       },
+      animation: {
+        shake: "shake 2s ease-in-out infinite",
+      },
+      keyframes: {
+        shake: {
+          "0%, 100%": { transform: "rotate(-90deg)" },
+          "50%": { transform: "rotate(90deg)" },
+        },
+      },
     },
   },
   plugins: [],

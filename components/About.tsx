@@ -35,7 +35,7 @@ export default function About({}: Props) {
           alt="my photo 2"
           width="400"
           height="500"
-          className="h-80 w-64 md:w-[400px] md:h-[500px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-full border-4 border-black"
+          className="h-80 w-64 md:w-[400px] md:h-[500px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-[100px] border-4 border-black"
         />
       </motion.div>
 

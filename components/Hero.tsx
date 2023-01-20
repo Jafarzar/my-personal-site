@@ -27,21 +27,8 @@ export default function Hero({}: Props) {
       }}
       className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
     >
-      <motion.div
-        whileHover={{
-          scale: 1.2,
-        }}
-      >
-        <motion.div
-          whileHover={{
-            rotate: [0, 0, 360, 360, 0],
-            y: [0, -50, 0, -50, 0],
-          }}
-          transition={{
-            type: "spring",
-            duration: 2,
-          }}
-        >
+      <div className="w-[144px] h-[144px] group">
+        <div className="group-hover:animate-bounce">
           <Image
             priority
             src="/img/jafar-2.jpg"
@@ -50,8 +37,9 @@ export default function Hero({}: Props) {
             height="144"
             className="relative rounded-full mx-auto object-cover border-4 border-black"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
+
       <div className="z-20">
         <h1 className="text-5xl font-semibold h-[2ch]">{text}</h1>
         <h1 className="text-md text-gray-500 py-2 tracking-widest font-semibold">
