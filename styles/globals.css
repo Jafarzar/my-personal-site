@@ -25,11 +25,11 @@
 
 @layer components {
   .sectionTitle {
-    @apply absolute top-24 tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black;
+    @apply absolute top-24 tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black z-50;
   }
 
   .headerButton {
-    @apply bg-gray-700 rounded-full cursor-pointer border-2 border-black;
+    @apply bg-purple-800 rounded-full cursor-pointer border-2 border-black;
   }
 
   .heroButton {

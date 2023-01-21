@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import Test from "../components/Test";
 
 const Home: NextPage = () => {
   return (
@@ -40,6 +41,9 @@ const Home: NextPage = () => {
       </section>
 
       {/* 3d Arts */}
+      <section id="projects" className="snap-center">
+        <Test />
+      </section>
     </div>
   );
 };

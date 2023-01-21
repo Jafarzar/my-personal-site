@@ -25,9 +25,11 @@ export default function Hero({}: Props) {
       transition={{
         duration: 1,
       }}
-      className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
+      className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden "
     >
-      <div className="w-[144px] h-[144px] group">
+      <div className="absolute top-[20%] bg-[url('/img/blobanimation.svg')] bg-center bg-no-repeat w-[600px] h-[600px] z-0" />
+
+      <div className="w-[144px] h-[144px] group z-50">
         <div className="group-hover:animate-bounce">
           <Image
             priority
@@ -35,14 +37,14 @@ export default function Hero({}: Props) {
             alt="my photo"
             width="144"
             height="144"
-            className="relative rounded-full mx-auto object-cover border-4 border-black"
+            className="relative rounded-full object-cover border-4 border-black"
           />
         </div>
       </div>
 
       <div className="z-20">
         <h1 className="text-5xl font-semibold h-[2ch]">{text}</h1>
-        <h1 className="text-md text-gray-500 py-2 tracking-widest font-semibold">
+        <h1 className="text-md text-gray-600 py-2 tracking-widest font-semibold">
           Front-End Web Developer
         </h1>
         <AnimatePresence>

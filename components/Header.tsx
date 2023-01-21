@@ -45,7 +45,7 @@ export default function Header({}: Props) {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
-                className="headerButton flex w-[34px] h-[34px]  justify-center items-center hover:bg-purple-800"
+                className="headerButton flex w-[34px] h-[34px]  justify-center items-center hover:bg-purple-900"
               >
                 <Icon icon="tabler:home" className="text-white" />
               </motion.div>

@@ -21,7 +21,7 @@ export default function About({}: Props) {
   // };
 
   return (
-    <div className="flex flex-col relative gap-4 h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center">
+    <div className="flex flex-col relative gap-4 h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center pt-[96px]">
       <h3 className="sectionTitle">About</h3>
 
       <motion.div
