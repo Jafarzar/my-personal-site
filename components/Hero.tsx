@@ -27,9 +27,9 @@ export default function Hero({}: Props) {
       }}
       className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden "
     >
-      <div className="absolute top-[20%] bg-[url('/img/blobanimation.svg')] bg-center bg-no-repeat w-[600px] h-[600px] z-0" />
+      <div className="absolute top-[15vh] bg-[url('/img/blobanimation.svg')] bg-center bg-no-repeat w-[600px] h-[600px] z-0" />
 
-      <div className="w-[144px] h-[144px] group z-50">
+      <div className="w-[144px] h-[144px] group z-20">
         <div className="group-hover:animate-bounce">
           <Image
             priority

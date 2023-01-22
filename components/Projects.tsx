@@ -1,28 +1,27 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Image from "next/image";
-import Layout from "./template/Layout";
 import Modal, { Data } from "./template/Modal";
 
 type Props = {};
 
 const DUMMY_DATA = [
   {
-    title: "project1",
+    title: "Kata-katain",
     image: "/img/gif-1.gif",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Qui, suscipit. Molestiae modi sint dolore cupiditate odioimpedit odit asperiores veniam facilis ut nam deleniti, eos totam fugiat omnis veritatis nemo.",
     link: "https://katakatain.vercel.app/quotes",
     github: "https://github.com/Jafarzar/kata-katain",
   },
   {
-    title: "project2",
+    title: "JajoMeals",
     image: "/img/gif-1.gif",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Qui, suscipit. Molestiae modi sint dolore cupiditate odioimpedit odit asperiores veniam facilis ut nam deleniti, eos totam fugiat omnis veritatis nemo.",
     link: "https://katakatain.vercel.app/quotes",
     github: "https://github.com/Jafarzar/kata-katain",
   },
   {
-    title: "project3",
+    title: "Guess My Number",
     image: "/img/gif-1.gif",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Qui, suscipit. Molestiae modi sint dolore cupiditate odioimpedit odit asperiores veniam facilis ut nam deleniti, eos totam fugiat omnis veritatis nemo.",
     link: "https://katakatain.vercel.app/quotes",
@@ -66,10 +65,10 @@ export default function Projects({}: Props) {
   };
 
   return (
-    <div className="flex flex-col relative gap-4 h-screen md:flex-row max-w-7xl px-10 justify-center mx-auto items-center">
+    <div className="badan">
       <div className="sectionTitle">Projects</div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+      <div className="projKonten">
         {DUMMY_DATA.map((data) => {
           return (
             <motion.div
@@ -77,7 +76,7 @@ export default function Projects({}: Props) {
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6, type: "spring" }}
-              className="flex flex-col justify-center text-center items-center gap-4"
+              className="projDiv"
             >
               <motion.div
                 whileHover={{ scale: 1.5 }}
@@ -90,10 +89,10 @@ export default function Projects({}: Props) {
                   alt="gif"
                   width="120"
                   height="120"
-                  className="w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-slate-600 shadow-md shadow-gray-800/60 cursor-pointer object-cover"
+                  className="projImg"
                 />
               </motion.div>
-              <h3 className="text-sm md:text-xl font-semibold tracking-widest">
+              <h3 className="text-base md:text-xl font-semibold">
                 {data.title}
               </h3>
             </motion.div>

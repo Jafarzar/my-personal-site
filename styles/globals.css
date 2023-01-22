@@ -24,24 +24,54 @@
 }
 
 @layer components {
-  .sectionTitle {
-    @apply absolute top-24 tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black z-50;
+  .badan {
+    @apply flex flex-col relative h-screen items-center text-center gap-[8vh] 2xl:gap-32 pt-20 max-w-7xl px-5 mx-auto;
+  }
+  .konten {
+    @apply flex flex-col md:flex-row gap-2 md:gap-10 items-center justify-center text-center;
   }
 
+  .sectionTitle {
+    @apply tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black;
+  }
+
+  /* HEADER */
   .headerButton {
     @apply bg-purple-800 rounded-full cursor-pointer border-2 border-black;
   }
 
+  /* HERO */
   .heroButton {
     @apply px-4 py-1 rounded-lg text-sm tracking-widest font-semibold text-white bg-purple-800 hover:bg-purple-900 border-2 border-black;
   }
+
+  /* ABOUT */
+  .aboutImg {
+    @apply relative overflow-hidden h-72 w-56 md:w-[400px] md:h-[500px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-[100px] border-4 border-black;
+  }
+  .aboutImgScale {
+    @apply absolute w-full h-full transition-all duration-500 ease-in-out transform object-cover hover:scale-110;
+  }
+
+  /* SKILL */
   .iconBorder {
     @apply bg-slate-900 border-4 border-slate-700 rounded-3xl w-20 h-20 flex justify-center items-center hover:cursor-grab active:cursor-grabbing;
   }
   .icons {
     @apply w-10 h-10 md:w-14 md:h-14;
   }
+
+  /* PROJECT */
   .modalButton {
-    @apply text-sm text-white font-medium bg-purple-800 hover:bg-purple-900 rounded-md py-2 px-4 border-2 border-black;
+    @apply text-sm md:text-base text-white font-semibold bg-purple-800 hover:bg-purple-900 rounded-md py-1 px-4 border-2 border-black;
+  }
+  .projDiv {
+    @apply flex flex-col justify-center text-center items-center gap-4;
+  }
+  .projKonten {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-12 items-start px-10;
+  }
+  .projImg {
+    @apply w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-black shadow-md shadow-gray-800/60 cursor-pointer object-cover;
   }
 }

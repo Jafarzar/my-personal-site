@@ -24,7 +24,7 @@ export default function Header({}: Props) {
 
   return (
     <>
-      <header className="sticky top-0 p-5 max-w-5xl mx-auto z-20 xl:items-center">
+      <header className="sticky top-0 p-5 max-w-5xl mx-auto z-50 xl:items-center">
         <div className="flex justify-between">
           <motion.div
             initial={{

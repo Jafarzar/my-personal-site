@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                 {/* BACKDROPS */}
                 <div
                   onClick={closeModal}
-                  className="absolute inset-0 bg-gray-500 opacity-75"
+                  className="absolute inset-0 bg-black/80 opacity-75"
                 />
               </div>
 
@@ -40,15 +40,15 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                   duration: 0.8,
                   ease: [0, 0.71, 0.2, 1.2],
                 }}
-                className="bg-white rounded-lg text-center items-center overflow-hidden transform"
+                className="rounded-lg text-center items-center overflow-hidden transform"
               >
-                <div className="bg-white p-4 border-b border-gray-200 sm:px-6">
+                <div className="bg-[#f5dfc3] p-4 sm:px-6">
                   <div className="flex flex-col items-center justify-between gap-4">
-                    <h3 className="my-2 text-lg font-semibold tracking-widest">
+                    <h3 className="my-2 text-xl font-semibold tracking-widest">
                       {data?.title}
                     </h3>
 
-                    <div className="flex flex-col items-center gap-4 max-w-xs md:max-w-prose md:items-start">
+                    <div className="flex flex-col items-center gap-4 max-w-xs md:max-w-prose md:items-start px-8">
                       {/* IMAGE CONTENT */}
                       {data!.image && (
                         <Image
@@ -56,7 +56,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                           alt="gif"
                           width="400"
                           height="400"
-                          className="w-64 h-fit border md:w-96"
+                          className="w-64 h-fit md:w-96 border-2 border-black"
                         />
                       )}
                       {/* LINK BUTTON */}
@@ -84,11 +84,9 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                       </div>
 
                       {/* DESCRIPTION */}
-                      <div className="font-semibold text-sm text-slate-800 mb-6 md:text-left">
-                        <p>Description</p>
-                        <div className="text-gray-500 font-normal">
-                          {data?.desc}
-                        </div>
+                      <div className="mb-6 md:text-left">
+                        <p className="font-semibold">Description</p>
+                        <p className="font-normal text-sm">{data?.desc}</p>
                       </div>
                     </div>
 
