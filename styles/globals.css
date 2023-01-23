@@ -55,10 +55,10 @@
 
   /* SKILL */
   .iconBorder {
-    @apply bg-slate-900 border-4 border-slate-700 rounded-3xl w-20 h-20 flex justify-center items-center hover:cursor-grab active:cursor-grabbing;
+    @apply bg-transparent border-2 border-black rounded-full w-12 h-12 flex justify-center items-center hover:cursor-grab active:cursor-grabbing bg-purple-900;
   }
   .icons {
-    @apply w-10 h-10 md:w-14 md:h-14;
+    @apply w-8 h-8 rounded-md;
   }
 
   /* PROJECT */
