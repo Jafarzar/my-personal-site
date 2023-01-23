@@ -25,7 +25,7 @@
 
 @layer components {
   .badan {
-    @apply flex flex-col relative h-screen items-center text-center gap-[8vh] 2xl:gap-32 pt-20 max-w-7xl px-5 mx-auto;
+    @apply flex flex-col relative h-screen items-center text-center gap-[8vh] 2xl:gap-32 pt-20 max-w-4xl px-5 mx-auto;
   }
   .konten {
     @apply flex flex-col md:flex-row gap-2 md:gap-10 items-center justify-center text-center;
@@ -47,7 +47,7 @@
 
   /* ABOUT */
   .aboutImg {
-    @apply relative overflow-hidden h-72 w-56 md:w-[400px] md:h-[500px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-[100px] border-4 border-black;
+    @apply relative overflow-hidden h-72 w-56 md:w-[350px] md:h-[500px] lg:w-[400px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-[150px] border-4 border-black;
   }
   .aboutImgScale {
     @apply absolute w-full h-full transition-all duration-500 ease-in-out transform object-cover hover:scale-110;
@@ -55,10 +55,10 @@
 
   /* SKILL */
   .iconBorder {
-    @apply bg-transparent border-2 border-black rounded-full w-12 h-12 flex justify-center items-center hover:cursor-grab active:cursor-grabbing bg-purple-900;
+    @apply bg-transparent border-2 border-black rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center hover:cursor-grab active:cursor-grabbing bg-purple-900;
   }
   .icons {
-    @apply w-8 h-8 rounded-md;
+    @apply w-8 h-8 md:w-10 md:h-10 rounded-md;
   }
 
   /* PROJECT */

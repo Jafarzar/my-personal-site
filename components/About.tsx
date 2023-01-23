@@ -30,7 +30,7 @@ export default function About({}: Props) {
           initial={{ x: 200, opacity: 0 }}
           transition={{ duration: 1.2 }}
           whileInView={{ x: 0, opacity: 1 }}
-          className="flex flex-col p-4 max-w-2xl md:w-[512px]"
+          className="flex flex-col p-4 max-w-2xl"
         >
           <p className="pb-2 md:text-left">
             The name is{" "}
