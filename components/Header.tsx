@@ -3,10 +3,11 @@ import { SocialIcon } from "react-social-icons";
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { JafarzarQuery } from "../graphql/generated";
 
-type Props = {};
+type Props = { allHeaders: JafarzarQuery["allHeaders"] };
 
-export default function Header({}: Props) {
+export default function Header({ allHeaders }: Props) {
   const [showTemporaryDiv, setShowTemporaryDiv] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,9 @@ export default function Header({}: Props) {
     navigator.clipboard.writeText("jafar.azhar17@gmail.com");
     setShowTemporaryDiv(true);
   };
-
+  const warna = {
+    "#1D9BF0": "hover:bg-[#c6362c]",
+  };
   return (
     <>
       <header className="sticky top-0 p-5 max-w-5xl mx-auto z-50 xl:items-center">
@@ -67,42 +70,26 @@ export default function Header({}: Props) {
             }}
             className="flex gap-5"
           >
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              className="headerButton hover:bg-[#1d9bf0]"
-            >
-              <SocialIcon
-                url="https://twitter.com/Jafarzar"
-                fgColor="white"
-                bgColor="transparent"
-                style={{ height: 30, width: 30 }}
-                target="_blank"
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              className="headerButton hover:bg-[#0a66c2]"
-            >
-              <SocialIcon
-                url="https://www.linkedin.com/in/jafarzar/"
-                fgColor="white"
-                bgColor="transparent"
-                style={{ height: 30, width: 30 }}
-                target="_blank"
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              className="headerButton hover:bg-[#161b22]"
-            >
-              <SocialIcon
-                url="https://github.com/Jafarzar"
-                fgColor="white"
-                bgColor="transparent"
-                style={{ height: 30, width: 30 }}
-                target="_blank"
-              />
-            </motion.div>
+            {allHeaders.map((item) => (
+              <motion.div
+                key={item.id}
+                whileHover={{ scale: 1.2 }}
+                className={
+                  `headerButton ` +
+                  (item.hoverColor?.hex &&
+                    "hover:bg-[" + item.hoverColor.hex + "]")
+                }
+              >
+                <SocialIcon
+                  url={item.url || undefined}
+                  fgColor="white"
+                  bgColor="transparent"
+                  style={{ height: 30, width: 30 }}
+                  target="_blank"
+                />
+              </motion.div>
+            ))}
+
             <motion.div
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}

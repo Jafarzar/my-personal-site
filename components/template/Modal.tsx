@@ -3,11 +3,11 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 export type Data = {
-  title: string;
-  image: string;
-  desc: string;
-  link: string;
-  github: string;
+  title?: string | null;
+  image?: string | null;
+  desc?: string | null;
+  link?: string | null;
+  github?: string | null;
 };
 
 type Props = {
@@ -64,7 +64,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                         <motion.a
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 1.2 }}
-                          href={data?.link}
+                          href={data?.link || ""}
                           rel="noreferrer"
                           target="_blank"
                           className="modalButton"
@@ -74,7 +74,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                         <motion.a
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 1.2 }}
-                          href={data?.github}
+                          href={data?.github || ""}
                           rel="noreferrer"
                           target="_blank"
                           className="modalButton"

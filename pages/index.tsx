@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import Header from "../components/Header";
@@ -6,8 +6,12 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Test from "../components/Test";
+import { JafarzarDocument, JafarzarQuery } from "../graphql/generated";
+import { request } from "../lib/request";
 
-const Home: NextPage = () => {
+type Props = { result: JafarzarQuery };
+
+const Home: NextPage<Props> = ({ result }) => {
   return (
     <div className="bg-[#f5dfc3] h-screen snap-y snap-mandatory z-0 overflow-auto overflow-x-hidden scroll-smooth font-share">
       <Head>
@@ -18,16 +22,16 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Header */}
-      <Header />
+      <Header allHeaders={result.allHeaders} />
 
       {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero hero={result.hero} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About about={result.about} />
       </section>
 
       {/* Skills */}
@@ -37,7 +41,7 @@ const Home: NextPage = () => {
 
       {/* Projects */}
       <section id="projects" className="snap-center">
-        <Projects />
+        <Projects allProjects={result.allProjectLists} />
       </section>
 
       {/* 3d Arts */}
@@ -46,6 +50,14 @@ const Home: NextPage = () => {
       </section>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
+  // retrieving the list of all articles
+  const result = await request(JafarzarDocument);
+  return {
+    props: { result },
+  };
 };
 
 export default Home;

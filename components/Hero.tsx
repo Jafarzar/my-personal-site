@@ -3,10 +3,11 @@ import { useTypewriter } from "react-simple-typewriter";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { JafarzarQuery } from "../graphql/generated";
 
-type Props = {};
+type Props = { hero: JafarzarQuery["hero"] };
 
-export default function Hero({}: Props) {
+export default function Hero({ hero }: Props) {
   const [text, helper] = useTypewriter({
     words: ["Hi, I'm Jafar", "Jafar Azhar"],
     loop: false,
@@ -33,7 +34,7 @@ export default function Hero({}: Props) {
         <div className="group-hover:animate-bounce">
           <Image
             priority
-            src="/img/jafar-2.jpg"
+            src={hero?.heroImg?.url || ""}
             alt="my photo"
             width="144"
             height="144"

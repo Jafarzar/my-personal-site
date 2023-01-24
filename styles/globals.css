@@ -72,6 +72,6 @@
     @apply grid grid-cols-2 md:grid-cols-3 gap-12 items-start px-10;
   }
   .projImg {
-    @apply w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-black shadow-md shadow-gray-800/60 cursor-pointer object-cover;
+    @apply w-20 h-20 md:w-36 md:h-36 rounded-xl border-4 border-black shadow-md shadow-gray-800/60 cursor-pointer object-cover;
   }
 }
