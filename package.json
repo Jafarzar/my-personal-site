@@ -6,9 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-ts-types": "graphql-codegen --config graphql.config.yml"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.16.4",
+    "@graphql-codegen/typed-document-node": "^2.3.12",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-operations": "^2.5.12",
+    "@graphql-typed-document-node/core": "^3.1.1",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -16,6 +22,8 @@
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.5.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

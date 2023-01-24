@@ -14,4 +14,7 @@ module.exports = {
     // Important: return the modified config
     return config;
   },
+  images: {
+    domains: ["www.datocms-assets.com"],
+  },
 };
