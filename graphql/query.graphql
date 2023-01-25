@@ -2,9 +2,7 @@ query Jafarzar {
   allHeaders {
     id
     url
-    hoverColor {
-      hex
-    }
+    styleTw
   }
   hero {
     id
@@ -12,7 +10,7 @@ query Jafarzar {
       url
     }
   }
-  allSkillIcons {
+  allSkillIcons(orderBy: _createdAt_DESC) {
     id
     icon
     styleTw

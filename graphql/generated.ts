@@ -81,12 +81,6 @@ export type ColorField = {
   red: Scalars['IntType'];
 };
 
-/** Specifies how to filter Color fields */
-export type ColorFilter = {
-  /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars['BooleanType']>;
-};
-
 /** Specifies how to filter by creation datetime */
 export type CreatedAtFilter = {
   /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
@@ -295,8 +289,8 @@ export type HeaderModelFilter = {
   _status?: InputMaybe<StatusFilter>;
   _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
   _updatedAt?: InputMaybe<UpdatedAtFilter>;
-  hoverColor?: InputMaybe<ColorFilter>;
   id?: InputMaybe<ItemIdFilter>;
+  styleTw?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
@@ -319,6 +313,8 @@ export enum HeaderModelOrderBy {
   UpdatedAtDesc = '_updatedAt_DESC',
   IdAsc = 'id_ASC',
   IdDesc = 'id_DESC',
+  StyleTwAsc = 'styleTw_ASC',
+  StyleTwDesc = 'styleTw_DESC',
   UrlAsc = 'url_ASC',
   UrlDesc = 'url_DESC'
 }
@@ -337,8 +333,8 @@ export type HeaderRecord = RecordInterface & {
   _status: ItemStatus;
   _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
   _updatedAt: Scalars['DateTime'];
-  hoverColor?: Maybe<ColorField>;
   id: Scalars['ItemId'];
+  styleTw?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
 };
 
@@ -2603,7 +2599,7 @@ export type FocalPoint = {
 export type JafarzarQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type JafarzarQuery = { __typename?: 'Query', allHeaders: Array<{ __typename?: 'HeaderRecord', id: string, url?: string | null, hoverColor?: { __typename?: 'ColorField', hex: string } | null }>, hero?: { __typename?: 'HeroRecord', id: string, heroImg?: { __typename?: 'FileField', url: string } | null } | null, allSkillIcons: Array<{ __typename?: 'SkillIconRecord', id: string, icon?: string | null, styleTw?: string | null }>, allProjectLists: Array<{ __typename?: 'ProjectListRecord', id: string, projectName?: string | null, repository?: string | null, website?: string | null, description?: string | null, preview?: { __typename?: 'FileField', url: string } | null }>, about?: { __typename?: 'AboutRecord', id: string, aboutText?: string | null, aboutImg?: { __typename?: 'FileField', url: string } | null } | null };
+export type JafarzarQuery = { __typename?: 'Query', allHeaders: Array<{ __typename?: 'HeaderRecord', id: string, url?: string | null, styleTw?: string | null }>, hero?: { __typename?: 'HeroRecord', id: string, heroImg?: { __typename?: 'FileField', url: string } | null } | null, allSkillIcons: Array<{ __typename?: 'SkillIconRecord', id: string, icon?: string | null, styleTw?: string | null }>, allProjectLists: Array<{ __typename?: 'ProjectListRecord', id: string, projectName?: string | null, repository?: string | null, website?: string | null, description?: string | null, preview?: { __typename?: 'FileField', url: string } | null }>, about?: { __typename?: 'AboutRecord', id: string, aboutText?: string | null, aboutImg?: { __typename?: 'FileField', url: string } | null } | null };
 
 
-export const JafarzarDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Jafarzar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allHeaders"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"hoverColor"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hex"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"heroImg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"allSkillIcons"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}},{"kind":"Field","name":{"kind":"Name","value":"styleTw"}}]}},{"kind":"Field","name":{"kind":"Name","value":"allProjectLists"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"orderBy"},"value":{"kind":"EnumValue","value":"_createdAt_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"preview"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"projectName"}},{"kind":"Field","name":{"kind":"Name","value":"repository"}},{"kind":"Field","name":{"kind":"Name","value":"website"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"about"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"aboutImg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"aboutText"}}]}}]}}]} as unknown as DocumentNode<JafarzarQuery, JafarzarQueryVariables>;
+export const JafarzarDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Jafarzar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allHeaders"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"styleTw"}}]}},{"kind":"Field","name":{"kind":"Name","value":"hero"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"heroImg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"allSkillIcons"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"orderBy"},"value":{"kind":"EnumValue","value":"_createdAt_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}},{"kind":"Field","name":{"kind":"Name","value":"styleTw"}}]}},{"kind":"Field","name":{"kind":"Name","value":"allProjectLists"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"orderBy"},"value":{"kind":"EnumValue","value":"_createdAt_DESC"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"preview"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"projectName"}},{"kind":"Field","name":{"kind":"Name","value":"repository"}},{"kind":"Field","name":{"kind":"Name","value":"website"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"Field","name":{"kind":"Name","value":"about"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"aboutImg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"aboutText"}}]}}]}}]} as unknown as DocumentNode<JafarzarQuery, JafarzarQueryVariables>;
