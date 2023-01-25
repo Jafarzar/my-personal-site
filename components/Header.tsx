@@ -22,9 +22,13 @@ export default function Header({ allHeaders }: Props) {
     navigator.clipboard.writeText("jafar.azhar17@gmail.com");
     setShowTemporaryDiv(true);
   };
-  const warna = {
-    "#1D9BF0": "hover:bg-[#c6362c]",
+
+  const warna: Record<string, string> = {
+    git: "hover:bg-[#161b22]",
+    linkedin: "hover:bg-[#0a66c2]",
+    twitter: "hover:bg-[#1d9bf0]",
   };
+
   return (
     <>
       <header className="sticky top-0 p-5 max-w-5xl mx-auto z-50 xl:items-center">
@@ -46,7 +50,7 @@ export default function Header({ allHeaders }: Props) {
           >
             <Link href="#hero">
               <motion.div
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
                 className="headerButton flex w-[34px] h-[34px]  justify-center items-center hover:bg-purple-900"
               >
@@ -74,11 +78,7 @@ export default function Header({ allHeaders }: Props) {
               <motion.div
                 key={item.id}
                 whileHover={{ scale: 1.2 }}
-                className={
-                  `headerButton ` +
-                  (item.hoverColor?.hex &&
-                    "hover:bg-[" + item.hoverColor.hex + "]")
-                }
+                className={`headerButton ${warna[item.styleTw || ""]}`}
               >
                 <SocialIcon
                   url={item.url || undefined}

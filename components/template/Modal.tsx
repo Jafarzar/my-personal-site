@@ -44,7 +44,7 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
               >
                 <div className="bg-[#f5dfc3] p-4 sm:px-6">
                   <div className="flex flex-col items-center justify-between gap-4">
-                    <h3 className="my-2 text-xl font-semibold tracking-widest">
+                    <h3 className="my-2 text-xl md:text-2xl xl:text-3xl font-semibold tracking-widest">
                       {data?.title}
                     </h3>
 
@@ -54,9 +54,9 @@ export default function Modal({ closeModal, isOpen, data }: Props) {
                         <Image
                           src={data!.image}
                           alt="gif"
-                          width="400"
-                          height="400"
-                          className="w-64 h-fit md:w-96 border-2 border-black"
+                          width="800"
+                          height="800"
+                          className="w-64 h-fit md:w-[450px] border-4 border-black"
                         />
                       )}
                       {/* LINK BUTTON */}

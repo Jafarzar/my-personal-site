@@ -11,11 +11,16 @@ module.exports = {
       },
       animation: {
         shake: "shake 2s ease-in-out infinite",
+        shake2: "shake2 2s ease-in-out infinite",
       },
       keyframes: {
         shake: {
-          "0%, 100%": { transform: "rotate(-90deg)" },
-          "50%": { transform: "rotate(90deg)" },
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        shake2: {
+          "0%, 100%": { transform: "rotate(3deg)" },
+          "50%": { transform: "rotate(-3deg)" },
         },
       },
     },
