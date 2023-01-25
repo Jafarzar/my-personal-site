@@ -31,7 +31,7 @@ export default function Header({ allHeaders }: Props) {
 
   return (
     <>
-      <header className="sticky top-0 p-5 max-w-5xl mx-auto z-50 xl:items-center">
+      <header className="fixed top-0 p-5 w-screen max-w-5xl mx-auto z-50 left-[50%] -translate-x-[50%] xl:items-center">
         <div className="flex justify-between">
           <motion.div
             initial={{

@@ -12,7 +12,7 @@ type Props = { result: JafarzarQuery };
 
 const Home: NextPage<Props> = ({ result }) => {
   return (
-    <div className="bg-[#f5dfc3] h-screen snap-y snap-mandatory z-0 overflow-auto overflow-x-hidden scroll-smooth font-share">
+    <div className="bg-[#f5dfc3] relative z-0 overflow-auto overflow-x-hidden scroll-smooth font-share">
       <Head>
         <title>Jafarzar</title>
         <meta name="description" content="My Personal Website" />
@@ -24,22 +24,22 @@ const Home: NextPage<Props> = ({ result }) => {
       <Header allHeaders={result.allHeaders} />
 
       {/* Hero */}
-      <section id="hero" className="snap-start">
+      <section id="hero">
         <Hero hero={result.hero} />
       </section>
 
       {/* About */}
-      <section id="about" className="snap-center">
+      <section id="about">
         <About about={result.about} />
       </section>
 
       {/* Skills */}
-      <section id="skills" className="snap-start">
+      <section id="skills">
         <Skills allSkills={result.allSkillIcons} />
       </section>
 
       {/* Projects */}
-      <section id="projects" className="snap-center">
+      <section id="projects">
         <Projects allProjects={result.allProjectLists} />
       </section>
     </div>
