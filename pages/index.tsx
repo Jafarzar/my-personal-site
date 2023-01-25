@@ -12,7 +12,7 @@ type Props = { result: JafarzarQuery };
 
 const Home: NextPage<Props> = ({ result }) => {
   return (
-    <div className="bg-[#f5dfc3] relative z-0 overflow-auto overflow-x-hidden scroll-smooth font-share">
+    <div className="bg-[#f5dfc3] relative h-screen z-0 overflow-auto overflow-x-hidden scroll-smooth font-share">
       <Head>
         <title>Jafarzar</title>
         <meta name="description" content="My Personal Website" />
