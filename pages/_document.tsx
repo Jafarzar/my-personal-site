@@ -28,7 +28,7 @@ export default function Document() {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jafarzar" />
         <meta name="twitter:creator" content="@jafarzar" />
-        {/* <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" /> */}
+        <meta property="og:url" content="https://jafarzar.com/" />
       </Head>
       <body>
         <Main />
