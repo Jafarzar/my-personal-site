@@ -25,11 +25,10 @@ export default function Document() {
 
         <meta property="og:image" content="/jafarzar.jpg" />
         <meta name="twitter:image:alt" content="jafarzar" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Jafarzar" />
-        <meta name="twitter:description" content="My Personal Website!"/>
+        <meta name="twitter:description" content="My Personal Website!" />
         <meta name="twitter:image" content="/jafarzar.jpg" />
-        <meta name="twitter:site" content="@jafarzar" />
         <meta name="twitter:creator" content="@jafarzar" />
         <meta property="og:url" content="https://jafarzar.com/" />
       </Head>
