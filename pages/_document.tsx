@@ -25,7 +25,7 @@ export default function Document() {
 
         <meta property="og:image" content="https://jafarzar.com/jafarzar.jpg" />
         <meta name="twitter:image:alt" content="jafarzar" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Jafarzar" />
         <meta name="twitter:description" content="My Personal Website!" />
         <meta
