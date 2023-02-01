@@ -59,7 +59,7 @@ export default function Skills({ allSkills }: Props) {
           transition={{ duration: 2 }}
           className="items-center p-4 max-w-lg text-center"
         >
-          I just finished all my training for this field in january 2023 (you
+          I just finished all my training for this field in January 2023 (you
           can consider me as a freshgrade😅). So i still have much more to learn
           and gain more experience.
         </motion.p>
