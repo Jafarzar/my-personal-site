@@ -14,6 +14,8 @@ export default function Skills({ allSkills }: Props) {
     next: "col-start-3 row-start-2",
     ts: "col-start-1 row-start-3",
     tw: "col-start-3 row-start-3",
+    scss: "col-start-2 row-start-3",
+    chakra: "col-start-2 row-start-1 text-[#60c9ca]",
   };
 
   return (
