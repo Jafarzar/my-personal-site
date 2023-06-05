@@ -7,6 +7,7 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { JafarzarDocument, JafarzarQuery } from "../graphql/generated";
 import { request } from "../lib/request";
+import Footer from "../components/Footer";
 
 type Props = { result: JafarzarQuery };
 
@@ -42,6 +43,8 @@ const Home: NextPage<Props> = ({ result }) => {
       <section id="projects">
         <Projects allProjects={result.allProjectLists} />
       </section>
+
+      <Footer />
     </div>
   );
 };
